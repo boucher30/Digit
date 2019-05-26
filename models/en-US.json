@@ -1,0 +1,148 @@
+{
+	"invocation": "digit",
+	"intents": [
+		
+		{
+			"name": "TotalIncomeIntent",
+			"phrases": [
+				"what is the total income in {year}",
+				"what is our total income in {year}",
+				"what is our total income in year {year}",
+				"what is the total income in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "TotalCOGSIntent",
+			"phrases": [
+				"what is the cogs in {year}",
+				"what is our cogs in {year}",
+				"what is our cogs in year {year}",
+				"what is the cogs in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type": {
+						"alexa": "AMAZON.DATE"
+					}
+				}
+			]
+		},
+		{
+			"name": "TotalGrossProfitIntent",
+			"phrases": [
+				"what is the total gross profit in {year}",
+				"what is our gross profit in {year}",
+				"what is our total gross profit in year {year}",
+				"what is the gross profit in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type": {
+						"alexa": "AMAZON.DATE"
+					}
+				}
+			]
+		},
+		{
+			"name": "TotalExpensesIntent",
+			"phrases": [
+				"what is the total expenses in {year}",
+				"what is our total expenses in {year}",
+				"what is our total expenses in year {year}",
+				"what is the total expenses in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type": {
+						"alexa": "AMAZON.DATE"
+					}
+				}
+			]
+		},
+		{
+			"name": "TotalNetIncomeIntent",
+			"phrases": [
+				"what is the total net income in {year}",
+				"what is our total net income in {year}",
+				"what is our total net income in year {year}",
+				"what is the total net income in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type": {
+						"alexa": "AMAZON.DATE"
+					}
+				}
+			]
+		},
+		{
+			"name": "CurrentRatioIntent",
+			"phrases": [
+				"what is the current ratio in {year}",
+				"what is our current ratio in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}

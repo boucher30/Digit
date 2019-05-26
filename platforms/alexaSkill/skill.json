@@ -1,0 +1,29 @@
+{
+	"manifest": {
+		"publishingInformation": {
+			"locales": {
+				"en-US": {
+					"summary": "Business Analytics Skill",
+					"examplePhrases": [
+						"Alexa open digit"
+					],
+					"name": "Digit",
+					"description": "Have Digit attend your next meeting! Digit can give insightful information about your business so you can make the best decisions going forward!"
+				}
+			},
+			"isAvailableWorldwide": true,
+			"testingInstructions": "Sample Testing Instructions.",
+			"category": "EDUCATION_AND_REFERENCE",
+			"distributionCountries": []
+		},
+		"apis": {
+			"custom": {
+				"endpoint": {
+					"sslCertificateType": "Wildcard",
+					"uri": "https://webhook.jovo.cloud/c970ffcd-3655-4ae5-881d-beb0d4adb705"
+				}
+			}
+		},
+		"manifestVersion": "1.0"
+	}
+}

@@ -1,0 +1,110 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "digit",
+			"types": [],
+			"intents": [
+				{
+					"name": "TotalIncomeIntent",
+					"samples": [
+						"what is the total income in {year}",
+						"what is our total income in {year}",
+						"what is our total income in year {year}",
+						"what is the total income in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalCOGSIntent",
+					"samples": [
+						"what is the cogs in {year}",
+						"what is our cogs in {year}",
+						"what is our cogs in year {year}",
+						"what is the cogs in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalGrossProfitIntent",
+					"samples": [
+						"what is the total gross profit in {year}",
+						"what is our gross profit in {year}",
+						"what is our total gross profit in year {year}",
+						"what is the gross profit in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalExpensesIntent",
+					"samples": [
+						"what is the total expenses in {year}",
+						"what is our total expenses in {year}",
+						"what is our total expenses in year {year}",
+						"what is the total expenses in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalNetIncomeIntent",
+					"samples": [
+						"what is the total net income in {year}",
+						"what is our total net income in {year}",
+						"what is our total net income in year {year}",
+						"what is the total net income in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "CurrentRatioIntent",
+					"samples": [
+						"what is the current ratio in {year}",
+						"what is our current ratio in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				}
+			]
+		}
+	}
+}
