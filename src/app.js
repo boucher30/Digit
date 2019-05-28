@@ -11,17 +11,46 @@ const { FileDb } = require('jovo-db-filedb');
 const { GoogleSheetsCMS } = require('jovo-cms-googlesheets');
 
 const app = new App();
-const MONTH_INDEX = 0;
-const INCOME_INDEX = 1;
-const COGS_INDEX = 2;
-const GROSS_PROFIT_INDEX = 3;
-const EXPENSES_INDEX = 4;
-const NET_ORDINARY_INCOME_INDEX = 5;
-const NET_INCOME_INDEX = 6;
-
-const TOTAL_ROW = 14;
-
-
+/*
+Dictionary to hold all constants from the spreadsheet
+*/
+let indexes = {
+    //PROFIT & LOSSES CONSTANTS
+    TOTALS_ROW: 14,
+    MONTH_COLUMN: 0,
+    INCOME_COLUMN: 1,
+    COGS_COLUMN : 2,
+    GROSS_PROFIT_COLUMN : 3, 
+    EXPENSES_COLUMN : 4, 
+    NET_ORDINARY_INCOME_COLUMN : 5, 
+    NET_INCOME_COLUMN : 6,
+    // BALANCE SHEET CONSTANTS
+    TOTAL_CHECKING_SAVINGS : 0,
+    TOTAL_ACCOUNTS_RECEIVABLE : 1, 
+    INVENTORY_ASSEST : 2, 
+    FIXED_ASSEST_SC : 3, 
+    TOTAL_CURRENT_ASSESTS : 5, 
+    TOTAL_FIXED_ASSESTS : 6, 
+    TOTAL_OTHER_ASSESTS : 7, 
+    TOTAL_ASSESTS : 8, 
+    TOTAL_ACCOUNTS_PAYABLE : 10, 
+    TOTAL_CREDIT_CARDS : 11, 
+    TOTAL_OTHER_CURRENT_LIABILITES : 12,
+    TOTAL_CURRENT_LIABILITIES : 14, 
+    TOTAL_LONG_TERM_LIABILITIES : 15,
+    ADDITIONAL_PAID_IN_CAPITAL : 17,
+    CAPITAL_STOCK : 18,
+    OWNERS_CAPITAL : 19, 
+    NET_INCOME : 21,
+    TOTAL_LIABILITIES : 23,
+    TOTAL_EQUITY : 24,
+    TOTAL_LIABILITIES_AND_EQUITY : 26,
+    CURRENT_RATIO : 29,
+    NET_WORKING_CAPITAL: 30,
+    WORKING_CAPITAL_RATIO : 31,
+    QUICK_RATIO : 32,
+    DEBT_EQUITY_RATIO : 33
+};
 
 app.use(
     new Alexa(),
@@ -100,7 +129,7 @@ app.setHandler({
     TotalIncomeIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let income = sheet[14][1]
+        let income = sheet[indexes.TOTALS_ROW][indexes.INCOME_COLUMN]
         this.$speech.addT('response.income', {year, income});
         this.ask(this.$speech);
 
@@ -109,7 +138,7 @@ app.setHandler({
     TotalCOGSIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let cogs = sheet[14][2]
+        let cogs = sheet[indexes.TOTALS_ROW][indexes.COGS_COLUMN]
         this.$speech.addT('response.cogs', {year, cogs});
         this.ask(this.$speech);
     },
@@ -117,7 +146,7 @@ app.setHandler({
     TotalGrossProfitIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let gross_profit = sheet[14][3]
+        let gross_profit = sheet[indexes.TOTALS_ROW][indexes.GROSS_PROFIT_COLUMN]
         this.$speech.addT('response.gross_profit', {year, gross_profit});
         this.ask(this.$speech);
     },
@@ -125,15 +154,23 @@ app.setHandler({
     TotalExpensesIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let expense = sheet[14][4]
+        let expense = sheet[indexes.TOTALS_ROW][indexes.EXPENSES_COLUMN]
         this.$speech.addT('response.expense', {year, expense});
+        this.ask(this.$speech);
+    },
+
+    TotalNOIIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "pl");
+        let noi = sheet[indexes.TOTALS_ROW][indexes.NET_ORDINARY_INCOME_COLUMN]
+        this.$speech.addT('response.noi', {year, noi});
         this.ask(this.$speech);
     },
 
     TotalNetIncomeIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let net_income = sheet[14][6]
+        let net_income = sheet[indexes.TOTALS_ROW][indexes.NET_INCOME_COLUMN]
         this.$speech.addT('response.net_income', {year, net_income});
         this.ask(this.$speech);
     },
@@ -141,7 +178,7 @@ app.setHandler({
     CurrentRatioIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "bs");
-        let ratio = sheet[29][1];
+        let ratio = sheet[indexes.TOTALS_ROW][indexes.CURRENT_RATIO];
         this.$speech.addT('response.current_ratio', {year, ratio});
         this.ask(this.$speech);
     }

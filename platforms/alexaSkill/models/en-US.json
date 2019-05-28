@@ -65,6 +65,21 @@
 					]
 				},
 				{
+					"name": "TotalNOIIntent",
+					"samples": [
+						"what is the total net ordinary income in {year}",
+						"what is our total net ordinary income in {year}",
+						"what is our total net ordinary income in year {year}",
+						"what is the total net ordinary income in year {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
 					"name": "TotalNetIncomeIntent",
 					"samples": [
 						"what is the total net income in {year}",

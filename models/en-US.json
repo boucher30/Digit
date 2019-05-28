@@ -72,6 +72,23 @@
 			]
 		},
 		{
+			"name": "TotalNOIIntent",
+			"phrases": [
+				"what is the total net ordinary income in {year}",
+				"what is our total net ordinary income in {year}",
+				"what is our total net ordinary income in year {year}",
+				"what is the total net ordinary income in year {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type": {
+						"alexa": "AMAZON.DATE"
+					}
+				}
+			]
+		},
+		{
 			"name": "TotalNetIncomeIntent",
 			"phrases": [
 				"what is the total net income in {year}",

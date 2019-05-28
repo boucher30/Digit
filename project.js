@@ -7,6 +7,6 @@ module.exports = {
        nlu: 'alexa',
     },
 //arn:aws:lambda:us-east-1:335282899168:function:Digit
-    endpoint: '${JOVO_WEBHOOK_URL}',
+    endpoint: 'arn:aws:lambda:us-east-1:335282899168:function:Digit',
 };
  
