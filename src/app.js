@@ -121,9 +121,33 @@ function getSheet(year, type){
 app.setHandler({
 
 
-    LAUNCH() {
-        this.$speech.addT('response.greeting');
-        this.ask(this.$speech);
+    async LAUNCH() {
+
+        if (!this.$request.getAccessToken()) {
+            this.$alexaSkill.showAccountLinkingCard();
+            this.tell('Please link you Account');
+        } else {
+            let token = this.$request.getAccessToken();
+            let options = {
+                method: 'GET',
+                uri: 'https://dev-arekp6j9.auth0.com/userinfo', // You can find your URL on Client --> Settings --> 
+                // Advanced Settings --> Endpoints --> OAuth User Info URL
+                headers: {
+                    authorization: 'Bearer ' + token,
+                }
+            };
+    
+            await rp(options).then((body) => {
+                let data = JSON.parse(body);
+                /*
+                To see how the user data was stored,
+                go to Auth -> Users -> Click on the user you authenticated earlier -> Raw JSON
+                */
+                this.tell(data.name + ', ' + data.email); // Output: Kaan Kilic, email@jovo.tech
+            });
+        }
+        // this.$speech.addT('response.greeting');
+        // this.ask(this.$speech);
     },
 
 
