@@ -4,3 +4,4 @@ bundle/
 bundle.zip
 .env
 credentials/
+sheets/
