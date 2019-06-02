@@ -10,6 +10,7 @@ const { JovoDebugger } = require('jovo-plugin-debugger');
 const { FileDb } = require('jovo-db-filedb');
 const { GoogleSheetsCMS } = require('jovo-cms-googlesheets');
 const rp = require('request-promise');
+const { MySQL } = require('jovo-db-mysql');
 
 const app = new App();
 /*
@@ -57,7 +58,7 @@ app.use(
     new Alexa(),
     new GoogleSheetsCMS(),
     new JovoDebugger(),
-    new FileDb()
+    new MySQL()
 );
 
 
@@ -125,13 +126,13 @@ app.setHandler({
 
         if (!this.$request.getAccessToken()) {
             this.$alexaSkill.showAccountLinkingCard();
-            this.tell('Please link you Account');
+            this.tell("You must have a Digit account in order to use the features within this skill. " + 
+            "Please use the Alexa app to link your Amazon account with your Digit Account.");
         } else {
             let token = this.$request.getAccessToken();
             let options = {
                 method: 'GET',
-                uri: 'https://dev-arekp6j9.auth0.com/userinfo', // You can find your URL on Client --> Settings --> 
-                // Advanced Settings --> Endpoints --> OAuth User Info URL
+                uri: 'https://dev-arekp6j9.auth0.com/userinfo', 
                 headers: {
                     authorization: 'Bearer ' + token,
                 }
@@ -139,11 +140,11 @@ app.setHandler({
     
             await rp(options).then((body) => {
                 let data = JSON.parse(body);
-                /*
-                To see how the user data was stored,
-                go to Auth -> Users -> Click on the user you authenticated earlier -> Raw JSON
-                */
-                this.tell(data.name + ', ' + data.email); // Output: Kaan Kilic, email@jovo.tech
+
+                this.$speech.addText("Welcome " + data.name + " to Digit.");
+
+                this.followUpState('AuthenticatedState')
+                    .ask(this.$speech, this.$reprompt)
             });
         }
         // this.$speech.addT('response.greeting');

@@ -8,6 +8,7 @@
     "jovo-cli": "^2.2.6",
     "jovo-cms-googlesheets": "^2.2.5",
     "jovo-db-filedb": "^2.0.2",
+    "jovo-db-mysql": "^2.2.4",
     "jovo-framework": "^2.2.6",
     "jovo-platform-alexa": "^2.0.2",
     "jovo-platform-googleassistant": "^2.0.2",
