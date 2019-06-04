@@ -182,9 +182,97 @@ app.setHandler({
         let ratio = sheet[indexes.TOTALS_ROW][indexes.CURRENT_RATIO];
         this.$speech.addT('response.current_ratio', {year, ratio});
         this.ask(this.$speech);
-    }
+    },
 
-    
+    AdditionalPaidInCapitalIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let apic = sheet[indexes.ADDITIONAL_PAID_IN_CAPITAL][1]
+        this.$speech.addT('response.apic', {year, apic});
+        this.ask(this.$speech);
+
+    },
+
+    CapitalStockIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let cap_stock = sheet[indexes.CAPITAL_STOCK][1]
+        this.$speech.addT('response.cap_stock', {year, cap_stock});
+        this.ask(this.$speech);
+
+    },
+
+    OwnersCapitalIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let own_cap = sheet[indexes.OWNERS_CAPITAL][1]
+        this.$speech.addT('response.own_cap', {year, own_cap});
+        this.ask(this.$speech);
+
+    },
+
+    TotalLiabilitiesIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let tot_liab = sheet[indexes.TOTAL_LIABILITIES][1]
+        this.$speech.addT('response.tot_liab', {year, tot_liab});
+        this.ask(this.$speech);
+
+    },
+
+    TotalEquityIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let tot_equ = sheet[indexes.TOTAL_EQUITY][1]
+        this.$speech.addT('response.tot_equ', {year, tot_equ});
+        this.ask(this.$speech);
+
+    },
+
+    TotalEquityAndLiabilitesIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let tot_equ_and_liab = sheet[indexes.TOTAL_LIABILITIES_AND_EQUITY][1]
+        this.$speech.addT('response.tot_equ_and_liab', {year, tot_equ_and_liab});
+        this.ask(this.$speech);
+
+    },
+
+    NetWorkingCapitalIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let network_cap = sheet[indexes.NET_WORKING_CAPITAL][1]
+        this.$speech.addT('response.network_cap', {year, network_cap});
+        this.ask(this.$speech);
+
+    },
+
+    QuickRatioIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let quick_ratio = sheet[indexes.QUICK_RATIO][1]
+        this.$speech.addT('response.quick_ratio', {year, quick_ratio});
+        this.ask(this.$speech);
+
+    },
+
+    WorkingCapitalRatioIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let work_cap_ratio = sheet[indexes.WORKING_CAPITAL_RATIO][1]
+        this.$speech.addT('response.work_cap_ratio', {year, work_cap_ratio});
+        this.ask(this.$speech);
+
+    },
+
+    DebtAndEquityRatioIntent(){
+        let year = Number(this.$inputs.year.value);
+        var sheet = getSheet(year, "bs");
+        let debt_equ_ratio = sheet[indexes.DEBT_EQUITY_RATIO][1]
+        this.$speech.addT('response.debt_equ_ratio', {year, debt_equ_ratio});
+        this.ask(this.$speech);
+
+    },
 
     
 });
