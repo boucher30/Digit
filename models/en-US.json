@@ -120,6 +120,173 @@
 					 
 				}
 			]
+		},
+		{
+			"name": "AdditionalPaidInCapitalIntent",
+			"phrases": [
+				"was there any additional paid in capital {year}",
+				"what is our additional paid in capital in {year}",
+				"what is the additional paid in capital in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "CapitalStockIntent",
+			"phrases": [
+				"how much capital stock is there in {year}",
+				"how much capital stock was there in {year}",
+				"what is our capital stock in {year}",
+				"what is the capital stock in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "OwnersCapitalIntent",
+			"phrases": [
+				"how much owner's capital in {year}",
+				"what is the owner's capital in {year}",
+				"what is our owner's capital in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "TotalLiabilitiesIntent",
+			"phrases": [
+				"what is the total liabilites in {year}",
+				"how much are we spending on liabilites in {year}",
+				"what is our total liabilites for {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "TotalEquityIntent",
+			"phrases": [
+				"what is the total equity in {year}",
+				"how much the total equity in {year}",
+				"how much is our total equity in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "TotalEquityAndLiabilitesIntent",
+			"phrases": [
+				"what is the combined equity and liabilites in {year}",
+				"what is our total equity and liabilites for {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "NetWorkingCapitalIntent",
+			"phrases": [
+				"what is our net working capital for {year}",
+				"how much total working capital was there in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "QuickRatioIntent",
+			"phrases": [
+				"what was our quick ratio for year {year}",
+				"what was our quick ratio in {year}",
+				"what is our quick ratio in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "WorkingCapitalRatioIntent",
+			"phrases": [
+				"what is our working capital ratio in {year}",
+				"what was our working capital ratio for {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
+		},
+		{
+			"name": "DebtAndEquityRatioIntent",
+			"phrases": [
+				"for {year} what is debt over equit ratio",
+				"what is the debt to equity ratio in {year}"
+			],
+			"inputs": [
+				{
+					"name": "year",
+					"type":{
+						"alexa": "AMAZON.DATE"
+					}
+					 
+				}
+			]
 		}
 	],
 	"alexa": {

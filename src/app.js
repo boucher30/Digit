@@ -98,6 +98,10 @@ function getSheet(year, type){
             case 2016:
                 sheet = app.$cms.pl_16.slice();      
                 break;
+            default:
+                //app.$alexaSkill.ask("hello");
+               // app.ask("The year " + year + " currently doesn't have any stored data. Please choose from 2016, 2017, or 2018.");
+                break;
         }
     }
     else{
@@ -110,6 +114,10 @@ function getSheet(year, type){
                 break;
             case 2016:
                 sheet = app.$cms.bs_16.slice();      
+                break;
+            default:
+                //app.$alexaSkill.ask("hello");
+                //app.ask("The year " + year + " currently doesn't have any stored data. Please choose from 2016, 2017, or 2018.");
                 break;
         }
     }
@@ -273,6 +281,10 @@ app.setHandler({
         this.ask(this.$speech);
 
     },
+
+    Unhandled(){
+        this.ask("I didn't catch that, please say it again.")
+    }
 
     
 });
