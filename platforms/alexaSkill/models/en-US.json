@@ -108,6 +108,143 @@
 					]
 				},
 				{
+					"name": "AdditionalPaidInCapitalIntent",
+					"samples": [
+						"was there any additional paid in capital {year}",
+						"what is our additional paid in capital in {year}",
+						"what is the additional paid in capital in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "CapitalStockIntent",
+					"samples": [
+						"how much capital stock is there in {year}",
+						"how much capital stock was there in {year}",
+						"what is our capital stock in {year}",
+						"what is the capital stock in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "OwnersCapitalIntent",
+					"samples": [
+						"how much owner's capital in {year}",
+						"what is the owner's capital in {year}",
+						"what is our owner's capital in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalLiabilitiesIntent",
+					"samples": [
+						"what is the total liabilites in {year}",
+						"how much are we spending on liabilites in {year}",
+						"what is our total liabilites for {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalEquityIntent",
+					"samples": [
+						"what is the total equity in {year}",
+						"how much the total equity in {year}",
+						"how much is our total equity in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "TotalEquityAndLiabilitesIntent",
+					"samples": [
+						"what is the combined equity and liabilites in {year}",
+						"what is our total equity and liabilites for {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "NetWorkingCapitalIntent",
+					"samples": [
+						"what is our net working capital for {year}",
+						"how much total working capital was there in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "QuickRatioIntent",
+					"samples": [
+						"what was our quick ratio for year {year}",
+						"what was our quick ratio in {year}",
+						"what is our quick ratio in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "WorkingCapitalRatioIntent",
+					"samples": [
+						"what is our working capital ratio in {year}",
+						"what was our working capital ratio for {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
+					"name": "DebtAndEquityRatioIntent",
+					"samples": [
+						"for {year} what is debt over equit ratio",
+						"what is the debt to equity ratio in {year}"
+					],
+					"slots": [
+						{
+							"name": "year",
+							"type": "AMAZON.DATE"
+						}
+					]
+				},
+				{
 					"name": "AMAZON.CancelIntent",
 					"samples": []
 				},

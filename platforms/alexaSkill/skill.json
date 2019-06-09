@@ -21,7 +21,12 @@
 				"endpoint": {
 					"sslCertificateType": "Wildcard",
 					"uri": "arn:aws:lambda:us-east-1:335282899168:function:Digit"
-				}
+				},
+				"interfaces": [
+					{
+						"type": "CAN_FULFILL_INTENT_REQUEST"
+					}
+				]
 			}
 		},
 		"manifestVersion": "1.0"
