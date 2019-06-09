@@ -84,6 +84,49 @@ function chooseQuarter(quarter){
     return q;
 }
 
+function getMonth(month){
+    var value;
+    switch(month){
+        case 'JANUARY': 
+            value = 1;
+            break;
+        case 'FEBRUARY': 
+            value = 2;
+            break;
+        case 'MARCH': 
+            value = 3;
+            break;
+        case 'APRIL': 
+            value = 4;
+            break;
+        case 'MAY': 
+            value = 5;
+            break;
+        case 'JUNE': 
+            value = 6;
+            break;
+        case 'JULY': 
+            value = 7;
+            break;
+        case 'AUGUST': 
+            value = 8;
+            break;
+        case 'SEPTEMBER': 
+            value = 9;
+            break;
+        case 'OCTOBER': 
+            value = 10;
+            break;
+        case 'NOVEMBER': 
+            value = 11;
+            break;
+        case 'DECEMBER': 
+            value = 12;
+            break;
+    }
+    return value;
+}
+
 function getSheet(year, type){
     var sheet;
     if(type == "pl"){

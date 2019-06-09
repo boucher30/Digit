@@ -6,12 +6,12 @@
   "dependencies": {
     "ask-cli": "^1.7.2",
     "jovo-cli": "^2.2.6",
-    "jovo-cms-googlesheets": "^2.2.5",
-    "jovo-db-filedb": "^2.0.2",
-    "jovo-framework": "^2.2.6",
-    "jovo-platform-alexa": "^2.0.2",
-    "jovo-platform-googleassistant": "^2.0.2",
-    "jovo-plugin-debugger": "^2.0.2"
+    "jovo-cms-googlesheets": "^2.2.9",
+    "jovo-db-filedb": "^2.2.7",
+    "jovo-framework": "^2.2.9",
+    "jovo-platform-alexa": "^2.2.11",
+    "jovo-platform-googleassistant": "^2.2.9",
+    "jovo-plugin-debugger": "^2.2.8"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
