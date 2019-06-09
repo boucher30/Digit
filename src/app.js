@@ -99,7 +99,7 @@ function getSheet(year, type){
                 sheet = app.$cms.pl_16.slice();      
                 break;
             default:
-                //app.$alexaSkill.ask("hello");
+                // app.$alexaSkill.ask("hello");
                // app.ask("The year " + year + " currently doesn't have any stored data. Please choose from 2016, 2017, or 2018.");
                 break;
         }
