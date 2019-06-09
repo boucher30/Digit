@@ -88,40 +88,40 @@ function chooseQuarter(quarter){
 function getMonth(month){
     var value;
     switch(month){
-        case 'january': 
+        case 'January': 
             value = 1;
             break;
-        case 'february': 
+        case 'February': 
             value = 2;
             break;
-        case 'march': 
+        case 'March': 
             value = 3;
             break;
-        case 'april': 
+        case 'April': 
             value = 4;
             break;
-        case 'may': 
+        case 'May': 
             value = 5;
             break;
-        case 'june': 
+        case 'June': 
             value = 6;
             break;
-        case 'july': 
+        case 'July': 
             value = 7;
             break;
-        case 'august': 
+        case 'August': 
             value = 8;
             break;
-        case 'september': 
+        case 'September': 
             value = 9;
             break;
-        case 'october': 
+        case 'October': 
             value = 10;
             break;
-        case 'november': 
+        case 'November': 
             value = 11;
             break;
-        case 'december': 
+        case 'December': 
             value = 12;
             break;
     }
@@ -177,6 +177,11 @@ app.setHandler({
         this.ask(this.$speech);
     },
 
+    /*
+
+        Profits & Losses INTENTS 
+
+    */
 
     TotalIncomeIntent(){
         let year = Number(this.$inputs.year.value);
@@ -187,7 +192,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             income = sheet[monthRow][indexes.INCOME_COLUMN];
-            this.$speech.addT('response.monthlyincome', {month, year, income});
+            this.$speech.addT('response.monthly_income', {month, year, income});
         }
         else{
             income = sheet[indexes.TOTALS_ROW][indexes.INCOME_COLUMN];
@@ -205,7 +210,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             cogs = sheet[monthRow][indexes.COGS_COLUMN]
-            this.$speech.addT('response.monthlycogs', {month, year, cogs})
+            this.$speech.addT('response.monthly_cogs', {month, year, cogs})
         }
         else{
             cogs = sheet[indexes.TOTALS_ROW][indexes.COGS_COLUMN]
@@ -222,7 +227,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             gross_profit = sheet[monthRow][indexes.GROSS_PROFIT_COLUMN]
-            this.$speech.addT('response.monthlygross_profit', {month, year, gross_profit});
+            this.$speech.addT('response.monthly_gross_profit', {month, year, gross_profit});
         }
         else{
             gross_profit = sheet[indexes.TOTALS_ROW][indexes.GROSS_PROFIT_COLUMN]
@@ -239,7 +244,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             expense = sheet[monthRow][indexes.EXPENSES_COLUMN]
-            this.$speech.addT('response.monthlyexpense', {month, year, expense});
+            this.$speech.addT('response.monthly_expense', {month, year, expense});
         }
         else{
             expense = sheet[indexes.TOTALS_ROW][indexes.EXPENSES_COLUMN]
@@ -256,7 +261,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             noi = sheet[monthRow][indexes.NET_ORDINARY_INCOME_COLUMN]
-            this.$speech.addT('response.monthlynoi', {month, year, noi});
+            this.$speech.addT('response.monthly_noi', {month, year, noi});
         }
         else{
             noi = sheet[indexes.TOTALS_ROW][indexes.NET_ORDINARY_INCOME_COLUMN]
@@ -273,7 +278,7 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             net_income = sheet[monthRow][indexes.NET_INCOME_COLUMN];
-            this.$speech.addT('response.monthlynet_income', {month, year, net_income});
+            this.$speech.addT('response.monthly_net_income', {month, year, net_income});
         }
         else{
             let net_income = sheet[indexes.TOTALS_ROW][indexes.NET_INCOME_COLUMN];
