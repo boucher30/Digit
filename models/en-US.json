@@ -43,6 +43,13 @@
 					"type": {
 						"alexa": "AMAZON.DATE"
 					}
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+					 
 				}
 			]
 		},
@@ -60,6 +67,13 @@
 					"type": {
 						"alexa": "AMAZON.DATE"
 					}
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+					 
 				}
 			]
 		},
@@ -77,6 +91,13 @@
 					"type": {
 						"alexa": "AMAZON.DATE"
 					}
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+					 
 				}
 			]
 		},
@@ -94,6 +115,13 @@
 					"type": {
 						"alexa": "AMAZON.DATE"
 					}
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+					 
 				}
 			]
 		},
@@ -111,6 +139,13 @@
 					"type": {
 						"alexa": "AMAZON.DATE"
 					}
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
+					}
+					 
 				}
 			]
 		},
