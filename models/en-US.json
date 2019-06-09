@@ -32,10 +32,12 @@
 		{
 			"name": "TotalCOGSIntent",
 			"phrases": [
-				"what is the cogs in {year}",
-				"what is our cogs in {year}",
-				"what is our cogs in year {year}",
-				"what is the cogs in year {year}"
+				"what is the cost of goods sold in {year}",
+				"what is our cost of goods sold in {year}",
+				"what is our cost of goods sold in year {year}",
+				"what is the cost of goods sold in year {year}",
+				"what is the cost of goods sold in {month} {year}",
+				"what is the cost of goods sold in {month} of {year}"
 			],
 			"inputs": [
 				{
@@ -59,7 +61,12 @@
 				"what is the total gross profit in {year}",
 				"what is our gross profit in {year}",
 				"what is our total gross profit in year {year}",
-				"what is the gross profit in year {year}"
+				"what is the gross profit in year {year}",
+				"what is the gross profit in {month} {year}",
+				"what is the gross profit in {month} {year}",
+				"what was the gross profit of {month} {year}",
+				"what was the gross profit of {month} of {year}"
+
 			],
 			"inputs": [
 				{
@@ -83,7 +90,10 @@
 				"what is the total expenses in {year}",
 				"what is our total expenses in {year}",
 				"what is our total expenses in year {year}",
-				"what is the total expenses in year {year}"
+				"what is the total expenses in year {year}",
+				"what is the total expenses in {month} {year}",
+				"what is the total expenses in {month} of {year}"
+
 			],
 			"inputs": [
 				{
@@ -107,7 +117,9 @@
 				"what is the total net ordinary income in {year}",
 				"what is our total net ordinary income in {year}",
 				"what is our total net ordinary income in year {year}",
-				"what is the total net ordinary income in year {year}"
+				"what is the total net ordinary income in year {year}",
+				"what is the total net ordinary income in {month} {year}",
+				"what is the total net ordinary income in {month} of {year}"
 			],
 			"inputs": [
 				{
@@ -131,7 +143,9 @@
 				"what is the total net income in {year}",
 				"what is our total net income in {year}",
 				"what is our total net income in year {year}",
-				"what is the total net income in year {year}"
+				"what is the total net income in year {year}",
+				"what is the total net income in {month} {year}",
+				"what is the total net income in {month} of {year}"
 			],
 			"inputs": [
 				{

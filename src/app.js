@@ -186,74 +186,100 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             income = sheet[monthRow][indexes.INCOME_COLUMN];
+            this.$speech.addT('response.monthlyincome', {month, year, income});
         }
         else{
             income = sheet[indexes.TOTALS_ROW][indexes.INCOME_COLUMN];
+            this.$speech.addT('response.income', {year, income});
         }
-        this.$speech.addT('response.income', {year, income});
         this.ask(this.$speech);
 
     },
 
     TotalCOGSIntent(){ 
-        let month = this.$input.month.value;
+        let month = this.$inputs.month.value;
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
         let cogs;
         if(month){
             let monthRow = getMonth(month);
-            let cogs = sheet[monthRow][indexes.COGS_COLUMN]
+            cogs = sheet[monthRow][indexes.COGS_COLUMN]
+            this.$speech.addT('response.monthlycogs', {month, year, cogs})
         }
-        else(year){
-            let cogs = sheet[TOTALS_ROW][indexes.COGS_COLUMN]
+        else{
+            cogs = sheet[indexes.TOTALS_ROW][indexes.COGS_COLUMN]
+            this.$speech.addT('response.cogs', {year, cogs});
         }
-        this.$speech.addT('response.cogs', {year, cogs});
         this.ask(this.$speech);
     },
 
     TotalGrossProfitIntent(){
-        let month = this.$input.month.value;
+        let month = this.$inputs.month.value;
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
         let gross_profit;
         if(month){
             let monthRow = getMonth(month);
-            let gross_profit = sheet[monthRow][indexes.GROSS_PROFIT_COLUMN]
+            gross_profit = sheet[monthRow][indexes.GROSS_PROFIT_COLUMN]
         }
         else{
-            let gross_profit = sheet[indexes.TOTALS_ROW][indexes.GROSS_PROFIT_COLUMN]
+            gross_profit = sheet[indexes.TOTALS_ROW][indexes.GROSS_PROFIT_COLUMN]
         }
         this.$speech.addT('response.gross_profit', {year, gross_profit});
         this.ask(this.$speech);
     },
 
     TotalExpensesIntent(){
+        let month = this.$inputs.month.value;
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let expense = sheet[indexes.TOTALS_ROW][indexes.EXPENSES_COLUMN]
+        let expense;
+        if(month){
+            let monthRow = getMonth(month);
+            expense = sheet[monthRow][indexes.EXPENSES_COLUMN]
+        }
+        else{
+            expense = sheet[indexes.TOTALS_ROW][indexes.EXPENSES_COLUMN]
+        }
         this.$speech.addT('response.expense', {year, expense});
         this.ask(this.$speech);
     },
 
     TotalNOIIntent(){
+        let month = this.$inputs.month.value;
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let noi = sheet[indexes.TOTALS_ROW][indexes.NET_ORDINARY_INCOME_COLUMN]
+        let noi;
+        if(month){
+            let monthRow = getMonth(month);
+            noi = sheet[monthRow][indexes.NET_ORDINARY_INCOME_COLUMN]
+        }
+        else{
+            noi = sheet[indexes.TOTALS_ROW][indexes.NET_ORDINARY_INCOME_COLUMN]
+        }
         this.$speech.addT('response.noi', {year, noi});
         this.ask(this.$speech);
     },
 
     TotalNetIncomeIntent(){
+        let month = this.$inputs.month.value;
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "pl");
-        let net_income = sheet[indexes.TOTALS_ROW][indexes.NET_INCOME_COLUMN]
+        let net_income;
+        if(month){
+            let monthRow = getMonth(month);
+            net_income = sheet[monthRow][indexes.NET_INCOME_COLUMN];
+        }
+        else{
+            let net_income = sheet[indexes.TOTALS_ROW][indexes.NET_INCOME_COLUMN];
+        }
         this.$speech.addT('response.net_income', {year, net_income});
         this.ask(this.$speech);
     },
-/////////////////////////////////////////
-//  PL INTENTS ^^^^^^
-//  BS INTENTS vvvvvv
-/////////////////////////////////////////
+    /////////////////////////////////////////
+    ////        PL INTENTS ^^^^^^       /////
+    ////        BS INTENTS vvvvvv       /////
+    /////////////////////////////////////////
     CurrentRatioIntent(){
         let year = Number(this.$inputs.year.value);
         var sheet = getSheet(year, "bs");
