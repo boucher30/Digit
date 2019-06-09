@@ -221,11 +221,12 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             gross_profit = sheet[monthRow][indexes.GROSS_PROFIT_COLUMN]
+            this.$speech.addT('response.monthlygross_profit', {month, year, gross_profit});
         }
         else{
             gross_profit = sheet[indexes.TOTALS_ROW][indexes.GROSS_PROFIT_COLUMN]
+            this.$speech.addT('response.gross_profit', {year, gross_profit});
         }
-        this.$speech.addT('response.gross_profit', {year, gross_profit});
         this.ask(this.$speech);
     },
 
@@ -237,11 +238,12 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             expense = sheet[monthRow][indexes.EXPENSES_COLUMN]
+            this.$speech.addT('response.monthlyexpense', {month, year, expense});
         }
         else{
             expense = sheet[indexes.TOTALS_ROW][indexes.EXPENSES_COLUMN]
+            this.$speech.addT('response.expense', {year, expense});
         }
-        this.$speech.addT('response.expense', {year, expense});
         this.ask(this.$speech);
     },
 
