@@ -88,40 +88,40 @@ function chooseQuarter(quarter){
 function getMonth(month){
     var value;
     switch(month){
-        case 'JANUARY': 
+        case 'january': 
             value = 1;
             break;
-        case 'FEBRUARY': 
+        case 'february': 
             value = 2;
             break;
-        case 'MARCH': 
+        case 'march': 
             value = 3;
             break;
-        case 'APRIL': 
+        case 'april': 
             value = 4;
             break;
-        case 'MAY': 
+        case 'may': 
             value = 5;
             break;
-        case 'JUNE': 
+        case 'june': 
             value = 6;
             break;
-        case 'JULY': 
+        case 'july': 
             value = 7;
             break;
-        case 'AUGUST': 
+        case 'august': 
             value = 8;
             break;
-        case 'SEPTEMBER': 
+        case 'september': 
             value = 9;
             break;
-        case 'OCTOBER': 
+        case 'october': 
             value = 10;
             break;
-        case 'NOVEMBER': 
+        case 'november': 
             value = 11;
             break;
-        case 'DECEMBER': 
+        case 'december': 
             value = 12;
             break;
     }
@@ -180,8 +180,16 @@ app.setHandler({
 
     TotalIncomeIntent(){
         let year = Number(this.$inputs.year.value);
+        let month = this.$inputs.month.value;
         var sheet = getSheet(year, "pl");
-        let income = sheet[indexes.TOTALS_ROW][indexes.INCOME_COLUMN]
+        let income;
+        if(month){
+            let monthRow = getMonth(month);
+            income = sheet[monthRow][indexes.INCOME_COLUMN];
+        }
+        else{
+            income = sheet[indexes.TOTALS_ROW][indexes.INCOME_COLUMN];
+        }
         this.$speech.addT('response.income', {year, income});
         this.ask(this.$speech);
 
