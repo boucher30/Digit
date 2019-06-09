@@ -8,13 +8,22 @@
 				"what is the total income in {year}",
 				"what is our total income in {year}",
 				"what is our total income in year {year}",
-				"what is the total income in year {year}"
+				"what is the total income in year {year}",
+				"what is the total income in {month} of {year}",
+				"what is our total income in {month} of {year}"
 			],
 			"inputs": [
 				{
 					"name": "year",
 					"type":{
 						"alexa": "AMAZON.DATE"
+					}
+					 
+				},
+				{
+					"name": "month",
+					"type":{
+						"alexa": "AMAZON.Month"
 					}
 					 
 				}
