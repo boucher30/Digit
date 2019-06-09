@@ -63,7 +63,7 @@
 				"what is our total gross profit in year {year}",
 				"what is the gross profit in year {year}",
 				"what is the gross profit in {month} {year}",
-				"what is the gross profit in {month} {year}",
+				"what is the gross profit in {month} of {year}",
 				"what was the gross profit of {month} {year}",
 				"what was the gross profit of {month} of {year}"
 
