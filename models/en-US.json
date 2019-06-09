@@ -114,12 +114,12 @@
 		{
 			"name": "TotalNOIIntent",
 			"phrases": [
-				"what is the total net ordinary income in {year}",
-				"what is our total net ordinary income in {year}",
-				"what is our total net ordinary income in year {year}",
-				"what is the total net ordinary income in year {year}",
-				"what is the total net ordinary income in {month} {year}",
-				"what is the total net ordinary income in {month} of {year}"
+				"what is the total net operating income in {year}",
+				"what is our total net operating income in {year}",
+				"what is our total net operating income in year {year}",
+				"what is the total net operating income in year {year}",
+				"what is the total net operating income in {month} {year}",
+				"what is the total net operating income in {month} of {year}"
 			],
 			"inputs": [
 				{

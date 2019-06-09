@@ -255,11 +255,12 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             noi = sheet[monthRow][indexes.NET_ORDINARY_INCOME_COLUMN]
+            this.$speech.addT('response.monthlynoi', {month, year, noi});
         }
         else{
             noi = sheet[indexes.TOTALS_ROW][indexes.NET_ORDINARY_INCOME_COLUMN]
+            this.$speech.addT('response.noi', {year, noi});
         }
-        this.$speech.addT('response.noi', {year, noi});
         this.ask(this.$speech);
     },
 
@@ -271,11 +272,12 @@ app.setHandler({
         if(month){
             let monthRow = getMonth(month);
             net_income = sheet[monthRow][indexes.NET_INCOME_COLUMN];
+            this.$speech.addT('response.monthlynet_income', {month, year, net_income});
         }
         else{
             let net_income = sheet[indexes.TOTALS_ROW][indexes.NET_INCOME_COLUMN];
+            this.$speech.addT('response.net_income', {year, net_income});
         }
-        this.$speech.addT('response.net_income', {year, net_income});
         this.ask(this.$speech);
     },
     /////////////////////////////////////////
