@@ -181,6 +181,7 @@ app.setHandler({
     TotalIncomeIntent(){
         let year = Number(this.$inputs.year.value);
         let month = this.$inputs.month.value;
+        console.log(month);
         var sheet = getSheet(year, "pl");
         let income;
         if(month){
